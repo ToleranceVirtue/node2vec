@@ -12,3 +12,6 @@ build
 .project
 .settings
 .idea
+*.txt
+*.edgelist
+*.emb
