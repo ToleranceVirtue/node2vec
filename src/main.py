@@ -12,10 +12,9 @@ Knowledge Discovery and Data Mining (KDD), 2016
 import argparse
 import numpy as np
 import networkx as nx
-import node2vec
 from gensim.models import Word2Vec
 
-from src import parse_args
+from src import parse_args, node2vec
 
 
 def read_graph():
