@@ -6,7 +6,6 @@
 @time: 2022/3/24 5:30 PM
 """
 import argparse
-import node2vec
 
 
 def parse_args():
@@ -15,10 +14,10 @@ def parse_args():
     '''
     parser = argparse.ArgumentParser(description="Run node2vec.")
 
-    parser.add_argument('--input', nargs='?', default='graph/top_raw_100000.edgelist',
+    parser.add_argument('--input', nargs='?', default='graph/stock.edgelist',
                         help='Input graph path')
 
-    parser.add_argument('--output', nargs='?', default='emb/top_raw_100000.emb',
+    parser.add_argument('--output', nargs='?', default='emb/stock.emb',
                         help='Embeddings path')
 
     parser.add_argument('--dimensions', type=int, default=128,
@@ -48,7 +47,7 @@ def parse_args():
     parser.add_argument('--weighted', dest='weighted', action='store_true',
                         help='Boolean specifying (un)weighted. Default is unweighted.')
     parser.add_argument('--unweighted', dest='unweighted', action='store_false')
-    parser.set_defaults(weighted=False)
+    parser.set_defaults(weighted=True)
 
     parser.add_argument('--directed', dest='directed', action='store_true',
                         help='Graph is (un)directed. Default is undirected.')
