@@ -14,10 +14,10 @@ def parse_args():
     '''
     parser = argparse.ArgumentParser(description="Run node2vec.")
 
-    parser.add_argument('--input', nargs='?', default='graph/stock.edgelist',
+    parser.add_argument('--input', nargs='?', default='graph/small_top_raw.edgelist',
                         help='Input graph path')
 
-    parser.add_argument('--output', nargs='?', default='emb/stock.emb',
+    parser.add_argument('--output', nargs='?', default='emb/small_top_raw.emb',
                         help='Embeddings path')
 
     parser.add_argument('--dimensions', type=int, default=128,
@@ -47,7 +47,7 @@ def parse_args():
     parser.add_argument('--weighted', dest='weighted', action='store_true',
                         help='Boolean specifying (un)weighted. Default is unweighted.')
     parser.add_argument('--unweighted', dest='unweighted', action='store_false')
-    parser.set_defaults(weighted=True)
+    parser.set_defaults(weighted=False)
 
     parser.add_argument('--directed', dest='directed', action='store_true',
                         help='Graph is (un)directed. Default is undirected.')
