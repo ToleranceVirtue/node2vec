@@ -23,4 +23,4 @@ print(results)
 for ent in results:
     idx = ent[0]
     sim = ent[1]
-    print(idx, sim)
+    print(idx2node[idx], sim)
