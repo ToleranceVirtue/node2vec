@@ -21,6 +21,6 @@ with open("graph/small_top_raw.txt", mode='r') as f:
 
 print(results)
 for ent in results:
-    idx = ent[0]
+    idx = int(ent[0])
     sim = ent[1]
     print(idx2node[idx], sim)
