@@ -70,7 +70,7 @@ with open(rawdata_path, 'r') as f:
                 t_idx = node2idx[tag]
             else:
                 t_idx = len(node2idx) + 1
-                node2idx[tag] = idx
+                node2idx[tag] = t_idx
             edge_list.append((idx, t_idx))
 
 wf = codecs.open("../graph/small_top_raw.edgelist", mode='w')
