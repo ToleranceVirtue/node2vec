@@ -12,7 +12,7 @@ args = parse_args()
 target_idx = 8293
 
 model = KeyedVectors.load_word2vec_format(args.output, binary=True, unicode_errors='ignore')
-results = model.most_similar([target_idx])
+results = model.most_similar([target_idx], topn=20)
 idx2node = {}
 with open("graph/small_top_raw.txt", mode='r') as f:
     for line in f.readlines():
