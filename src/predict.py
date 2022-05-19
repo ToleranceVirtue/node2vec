@@ -17,7 +17,7 @@ idx2node = {}
 with open("graph/small_top_raw.txt", mode='r') as f:
     for line in f.readlines():
         idx, name = line.strip().split("$")
-        idx2node[idx] = name
+        idx2node[int(idx)] = name
 
 print(results)
 for ent in results:
