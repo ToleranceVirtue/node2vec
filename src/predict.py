@@ -16,7 +16,7 @@ results = model.most_similar([target_idx])
 idx2node = {}
 with open("graph/small_top_raw.txt", mode='r') as f:
     for line in f.readlines():
-        idx, name = line.strip().split(" ")
+        idx, name = line.strip().split("$")
         idx2node[idx] = name
 
 print(results)

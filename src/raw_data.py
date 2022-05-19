@@ -82,5 +82,5 @@ wf.close()
 idx_wf = codecs.open("../graph/small_top_raw.txt", mode='w')
 for node, idx in node2idx.items():
     print(idx, node, index2name[idx])
-    idx_wf.write(f"{idx} {node}\n")
+    idx_wf.write(f"{idx}${node}\n")
 idx_wf.close()
