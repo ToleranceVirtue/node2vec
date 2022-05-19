@@ -22,7 +22,7 @@ with open("graph/small_top_raw.txt", mode='r') as f:
         idx, name = tokens
         idx2node[int(idx)] = name
 
-print(results)
+print(idx2node[target_idx])
 for ent in results:
     idx = int(ent[0])
     sim = ent[1]
