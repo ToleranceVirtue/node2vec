@@ -14,10 +14,10 @@ def parse_args():
     '''
     parser = argparse.ArgumentParser(description="Run node2vec.")
 
-    parser.add_argument('--input', nargs='?', default='graph/small_top_raw.edgelist',
+    parser.add_argument('--input', nargs='?', default='graph/new_small_top_raw.edgelist',
                         help='Input graph path')
 
-    parser.add_argument('--output', nargs='?', default='emb/small_top_raw.emb',
+    parser.add_argument('--output', nargs='?', default='emb/new_small_top_raw.emb',
                         help='Embeddings path')
 
     parser.add_argument('--dimensions', type=int, default=128,

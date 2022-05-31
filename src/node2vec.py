@@ -126,7 +126,6 @@ def alias_setup(probs):
     while len(smaller) > 0 and len(larger) > 0:
         small = smaller.pop()
         large = larger.pop()
-
         J[small] = large
         q[large] = q[large] + q[small] - 1.0
         if q[large] < 1.0:
